@@ -28,7 +28,7 @@ while True:
         try_guess += 1
 
         if rand_num == input_num:
-            print("Well done!")
+            print(f"Well done! You guessed it in {try_guess} {'try' if try_guess == 1 else 'tries'}!")
             break
         elif input_num < rand_num:
             if try_guess != max_attempts:
