@@ -18,7 +18,7 @@ max_attempts = 3
 
 while try_guess < max_attempts:
     try:
-        input_num = int(input(f"Pick a number between 0 and {max_num}: "))
+        input_num = int(input(f"You have {max_attempts - try_guess} chances. Pick a number between 0 and {max_num}: "))
     except ValueError:
         print("Please enter a valid number.")
         continue
