@@ -1,13 +1,16 @@
 import random
 
-difficulty = input("Choose the game difficulty (easy/medium/hard): ")
+difficulty = input("Choose the game difficulty (easy/medium/hard): ").strip().lower()
 
 if difficulty == "easy":
     max_num = 5
 elif difficulty == "medium":
     max_num = 10
-else:
+elif difficulty == "hard":
     max_num = 20
+else:
+    print("Invalid difficulty. Defaulting to medium.")
+    max_num = 10
 
 rand_num = random.randint(0, max_num)
 try_guess = 0
