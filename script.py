@@ -1,12 +1,21 @@
 import random
 
-rand_num = random.randint(0,10)
+difficulty = input("Choose the game difficulty (easy/medium/hard): ")
+
+if difficulty == "easy":
+    max_num = 5
+elif difficulty == "medium":
+    max_num = 10
+else:
+    max_num = 20
+
+rand_num = random.randint(0, max_num)
 try_guess = 0
 max_attempts = 3
 
 while try_guess < max_attempts:
     try:
-        input_num = int(input("Pick a number between 0 and 10: "))
+        input_num = int(input(f"Pick a number between 0 and {max_num}: "))
     except ValueError:
         print("Please enter a valid number.")
         continue
