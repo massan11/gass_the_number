@@ -17,9 +17,11 @@ while try_guess < max_attempts:
         print("Well done!")
         break
     elif input_num < rand_num:
-        print("Guess a bigger number.")
+        if try_guess != max_attempts:
+            print("Guess a bigger number.")
     else:
-        print("Guess a lower number.")
+        if try_guess != max_attempts:
+            print("Guess a lower number.")
         
     if try_guess == max_attempts:
         print(f"Game over. The number was {rand_num}.")
